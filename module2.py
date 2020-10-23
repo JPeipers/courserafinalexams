@@ -6,6 +6,12 @@ import sys
 
 txt_directory = 'module2_review/'
 destination_directory = 'module2_json/'
+try:
+    os.mkdir('module2_json/')
+except:
+    print("Error while making directory:", sys.exc_info()[0])
+
+
 revlist = []
 for file in os.listdir(txt_directory):
     try:
